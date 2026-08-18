@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:tc:postgresql:16-alpine:///finance_test_db
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+
+app:
+  jwt:
+    secret: test-secret-key-for-jwt-signing-in-test-profile-only-not-for-prod
+    access-token-expiration-ms: 900000
+    refresh-token-expiration-ms: 604800000

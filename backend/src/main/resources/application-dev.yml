@@ -1,0 +1,12 @@
+spring:
+  docker:
+    compose:
+      file: ../docker-compose.yml
+      lifecycle-management: start-only
+
+  jpa:
+    show-sql: true
+
+logging:
+  level:
+    com.financeapp: DEBUG
